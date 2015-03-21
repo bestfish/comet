@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<servlet>
+		<description></description>
+		<display-name>CommetServlet</display-name>
+		<servlet-name>CommetServlet</servlet-name>
+		<servlet-class>com.comet.CommetServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CommetServlet</servlet-name>
+		<url-pattern>/CommetServlet</url-pattern>
+	</servlet-mapping>
+	<listener>
+		<description>Comet4J容器侦听</description>
+		<listener-class>org.comet4j.core.CometAppListener</listener-class>
+	</listener>
+	<servlet>
+		<description>Comet连接[默认:org.comet4j.core.CometServlet]</description>
+		<display-name>CometServlet</display-name>
+		<servlet-name>CometServlet</servlet-name>
+		<servlet-class>org.comet4j.core.CometServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CometServlet</servlet-name>
+		<url-pattern>/conn</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+		<description>HelloWorld</description>
+		<listener-class>com.comet.HelloWorld</listener-class>
+	</listener>
+</web-app>
